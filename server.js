@@ -94,6 +94,9 @@ app.post("/bfhl", (req, res) => {
 app.get("/bfhl", (req, res) => {
   res.status(200).json({ operation_code: 1 });
 });
+app.get("/", (req, res) => {
+  res.send("Welcome to BFHL API. Use /bfhl endpoint.");
+});
 
 app.listen(PORT, () => {
   console.log(` Server running at http://localhost:${PORT}`);
